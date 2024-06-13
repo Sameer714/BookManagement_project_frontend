@@ -44,8 +44,9 @@
         <td>{{ user.status }}</td>
         
         <td> 
-          <button class="dropbtn" *ngIf="user.status === 'INACTIVE'" (click)="changestatus(user.id)">Activate</button>
-          <button class="dropbtn" *ngIf="user.status === 'ACTIVE'" (click)="changestatus(user.id)">Inactivate</button>
+          <button class="dropbtn" *ngIf="user.status === 'INACTIVE' && user.id != this.id" (click)="changestatus(user.id)">Activate</button>
+          <button class="dropbtn" *ngIf="user.status === 'ACTIVE' && user.id != this.id" (click)="changestatus(user.id)">Inactivate</button>
+          <button class="dropbtn" *ngIf="user.id == this.id">Self User</button>
         </td>
 
         <td>

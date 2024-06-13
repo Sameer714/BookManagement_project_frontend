@@ -11,7 +11,7 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
 import { DelUserComponent } from './components/del-user/del-user.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
-import { ChangePassComponent } from './components/change-pass/forgot-pass.component';
+import { ChangePassComponent } from './components/change-pass/change-pass.component';
 
 const routes: Routes = [
   {
