@@ -1,0 +1,24 @@
+.heading{
+    text-align: center;
+    color: #FFFFFF
+
+  }
+.dy {
+    margin: 73px;
+    font-family: cursive;
+    color: #FFFFFF;
+}
+
+.pr{
+    font-size: x-large;
+}
+
+.bg-img{
+    background-image: url("https://img.freepik.com/free-photo/wall-wallpaper-concrete-colored-painted-textured-concept_53876-31799.jpg?w=740&t=st=1718087110~exp=1718087710~hmac=f3d126b08d32b94c67b4e3dcc9b0565b7ab5ed2ba9bf810763d675830e78e7f1");		
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

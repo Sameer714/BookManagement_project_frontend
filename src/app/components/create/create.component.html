@@ -1,0 +1,24 @@
+<div>
+	<div class="bg-img"> 
+        <form [formGroup]="createForm" class="container">
+            <div class="input-container">
+              <label>Book Name:</label>
+              <input type="text" formControlName="bookName" />
+            </div>
+            <div class="input-container">
+              <label>Author Name :</label>
+              <input type="text" formControlName="authorName" />
+            </div>
+            <div class="input-container">
+                <label>Launch Date</label>
+                <input type="date" formControlName="launchDate" />
+              </div>
+              <div class="abk">
+                <label>About Book</label>
+                <input type="text" formControlName="aboutBook" placeholder="Under 220 characters!"/>
+              </div>
+            <div class = "bttn"><button type="submit" class = "button" [disabled]= "createForm.invalid" (click)="create()">Create Book!</button>
+            </div>
+          </form>				  
+	</div>
+</div>

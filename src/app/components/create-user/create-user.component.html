@@ -1,0 +1,25 @@
+<div>
+	<div class="bg-img"> 
+        <form [formGroup]="createUserForm" class="container">
+            <div class="input-container">
+              <label>Name:</label>
+              <input type="text" formControlName="name">
+            </div>
+            <div class="input-container">
+              <label>UserName:</label>
+              <input type="text" formControlName="userName" />
+            </div>
+            <div class="input-container">
+                <label>Email id:</label>
+                <input type="email" formControlName="email" />
+              </div>
+
+              <div class="input-container">
+                <label>Password</label>
+                <input type="password" formControlName="pass">
+              </div>
+            <div class = "bttn"><button type="submit" class = "button" [disabled]= "createUserForm.invalid" (click)="signup()">Create Account </button>
+            </div>
+          </form>
+	</div>
+</div>

@@ -1,0 +1,49 @@
+<div class="header">
+  <h1 class="heading"><u><i>Welcome to the Library!</i></u></h1>
+  <div class="lg">
+    <div class="user">
+      <div class="dropdown">
+        <span class="user"><b><u>{{ loggedinUser }}</u></b></span>
+        <div class="dropdown-content">
+          <p class="dropdown-option" (click)="logout()"><b>Logout</b></p>
+          <p class="dropdown-option" (click)="changepass()"><b>Change Pass</b></p>
+        </div>
+      </div>
+    </div>   
+  </div>
+</div>
+<div class="df">
+  <button class="bttn" type="submit" (click)="Admin()" *ngIf="role == 'ROLE_ADMIN'"><b>User List</b></button>
+</div>
+
+<div class="dif">
+  <button class="bttn" type="submit" (click)="create()" *ngIf="role == 'ROLE_ADMIN'"><b>Create New Book</b></button>
+</div>
+
+
+<div>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>S.No.</th>
+        <th>Book Name</th>
+        <th>Author Name</th>
+        <th>Launch Date</th>
+        <th>View</th>
+        <th *ngIf="role == 'ROLE_ADMIN'">Update</th>
+        <th *ngIf="role == 'ROLE_ADMIN'">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of responseData; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ book.bookName }}</td>
+        <td>{{ book.authorName }}</td>
+        <td>{{ this.launchDate[i] }}</td>
+        <td><a [routerLink]="['/data', book.id]">Open</a></td>
+        <td *ngIf="role == 'ROLE_ADMIN'"><a [routerLink]="['/update', book.id]">Edit</a></td>
+        <td *ngIf="role == 'ROLE_ADMIN'"><span (click)="delete(book.id)" style="cursor: pointer;">Delete</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

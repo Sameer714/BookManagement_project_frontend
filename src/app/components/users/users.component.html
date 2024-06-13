@@ -1,0 +1,59 @@
+<div class="header">
+  <h1 class="heading"><u><i>Welcome to the Users List!</i></u></h1>
+  <div class="lg">
+    <div class="user">
+      <div class="dropdown">
+        <span class="user"><b><u>{{ loggedinUser }}</u></b></span>
+        <div class="dropdown-content">
+          <p class="dropdown-option" (click)="logout()"><b>Logout</b></p>
+        </div>
+      </div>
+    </div>   
+  </div>
+</div>
+
+<div class="dif">
+  <button class="bttn" type="submit" (click)="create()" *ngIf="role == 'ROLE_ADMIN'"><b>Add New User!</b></button>
+</div>
+
+
+
+<div>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>User Name</th>
+        <th>Role</th>
+        <th>Status</th>
+        <th>Change Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of responseData; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ user.status }}</td>
+        
+        <td> 
+          <button class="dropbtn" *ngIf="user.status === 'INACTIVE'" (click)="changestatus(user.id)">Activate</button>
+          <button class="dropbtn" *ngIf="user.status === 'ACTIVE'" (click)="changestatus(user.id)">Inactivate</button>
+        </td>
+
+        <td>
+          <div class="dropdown">
+            <span><img class="dots" src="assets/dots.png" alt="Options"></span>
+            <div class="dropdown-content">
+              <a [routerLink]="['/user-info', user.id]">View</a>
+              <a *ngIf="this.id == user.id" [routerLink]="['/update-user', user.id]">Update</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

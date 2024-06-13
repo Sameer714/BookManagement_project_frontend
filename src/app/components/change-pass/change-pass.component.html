@@ -1,0 +1,22 @@
+<div>
+	<div class="bg-img"> 
+        <form [formGroup]="changePassForm" class="container">
+            <div class="input-container">
+              <label>Email:</label>
+              <input type="email" formControlName="email" />
+            </div>
+
+            <div class="input-container">
+              <label>Enter  Password:</label>
+              <input type="password" formControlName="oldpass" />
+            </div>
+
+            <div class="input-container">
+              <label>Enter New Password:</label>
+              <input type="password" formControlName="pass" />
+            </div>
+            <div class = "bttn"><button type="submit" class = "button" (click)="changepass()">Update Password! </button>
+            </div>
+          </form>
+	</div>
+</div>

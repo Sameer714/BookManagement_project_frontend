@@ -1,0 +1,36 @@
+<div>
+  <div class="bg-img">
+    <form [formGroup]="signupForm" class="container">
+      <div class="input-container">
+        <label>Email:</label>
+        <input type="email" formControlName="email" />
+      </div>
+      <div class="input-container">
+        <label>Password:</label>
+        <input type="password" formControlName="pass" />
+      </div>
+      <div class="input-container">
+        <label>Name</label>
+        <input type="text" formControlName="name" />
+      </div>
+
+      <div class="input-container">
+        <label>UserName</label>
+        <input type="text" formControlName="userName" />
+      </div>
+
+      <div class="cred"><b>Role:</b>
+        <input type="radio" formControlName="role" id="admin" name="role" value="ADMIN"> <label
+          for="admin">ADMIN</label><br>
+        <input type="radio" formControlName="role" id="user" name="role" value="USER"> <label
+          for="user">USER</label><br>
+
+      </div>
+      <div class="bttn"><button type="submit" class="button" [disabled]="signupForm.invalid" (click)="signup()">Create
+          Account </button>
+      </div>
+      <div class="signin"><a routerLink="/login">Sign in!</a> </div>
+
+    </form>
+  </div>
+</div>

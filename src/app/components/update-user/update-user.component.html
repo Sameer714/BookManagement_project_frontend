@@ -1,0 +1,30 @@
+<div>
+  <div class="bg-img"> 
+      <form [formGroup]="updateUserForm" class="container">
+          <div class="input-container">
+              <label>Name:</label>
+              <input type="text" formControlName="name" />
+          </div>
+          <div class="input-container">
+              <label>User Name :</label>
+              <input type="text" formControlName="userName" />
+          </div>
+          <div class="input-container">
+              <label>Email id</label>
+              <input type="email" formControlName="email" readonly />
+          </div>
+          <div class="input-container">
+              <label>Password:</label>
+              <input type="password" formControlName="pass" readonly />
+          </div>
+          <div class="cred">
+              <b>Role:</b>
+              <input type="radio" formControlName="role" id="admin" name="role" value="ADMIN"> <label for="admin">ADMIN</label><br>
+              <input type="radio" formControlName="role" id="user" name="role" value="USER"> <label for="user">USER</label><br>
+          </div>
+          <div class="bttn">
+              <button type="submit" class="button" [disabled]="updateUserForm.invalid" (click)="update()">Update User!</button>
+          </div>
+      </form>				  
+  </div>
+</div>

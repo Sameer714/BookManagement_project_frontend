@@ -1,0 +1,195 @@
+/* General styles */
+.styled-table {
+  width: 95%;
+  border-collapse: collapse;
+  margin: 25px;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  border-radius: 0px 10px 0 0;
+  overflow: hidden;
+}
+
+.bg {
+  background-image: url("https://images.unsplash.com/photo-1515764741095-712094f48b42?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  text-align: center;
+  font-size: 40px;
+  color: rgba(252, 255, 255, 0.8);
+}
+
+.df {
+  display: flex;
+  justify-content: start;
+  padding-right: 35px;
+}
+
+.lg {
+  display: flex;
+  justify-content: end;
+  padding-right: 35px;
+}
+
+ .bttn {
+  background-color: rgba(36, 122, 129, 0.8);
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 11px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 45px;
+    transition-duration: 0.4s;
+    border: groove;
+    transition: background-color 0.3s; 
+  }
+  .bttn:hover,
+.bttn:focus {
+  background-color: rgba(11, 90, 97, 1); 
+}
+
+
+.dif{
+  display: flex;
+  justify-content: end;
+  padding-right: 35px;
+}
+
+.user {
+  color: #dddddd;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  cursor: pointer;
+  margin-top: 5px;
+
+}
+
+.dropbtn {
+  background-color: rgba(36, 122, 129, 0.8);
+  color: white;
+  border-radius: 15px;
+  padding: 8px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: rgba(11, 90, 97, 1); 
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.header {
+  background-color: rgba(10, 59, 63, 0.8);
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 33px;
+}
+
+.header .heading {
+  font-size: 35px;
+  margin-bottom: -41px;
+  margin-top: 15px;
+}
+
+.header .lg {
+  margin-top: 5px;
+}
+
+.bttun {
+  background-color: rgba(240, 244, 245, 0.8);
+  color: rgb(10, 10, 10);
+  padding: 10px 20px;
+  border: groove;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bttun:hover {
+  background-color: #2d4f5c;
+}
+
+.dots {
+  height: 15px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(31, 121, 129); 
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a,
+.dropdown-content span {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover,
+.dropdown-content span:hover {
+  background-color: rgb(49, 138, 146); 
+}
+
+.dropdown-option {
+  cursor: pointer;
+  padding: 8px 16px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(11, 90, 97, 1); 
+}
+
+.dropdown-option:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.usernm{
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.delete-action {
+  cursor: pointer;
+}
+
+.styled-table thead tr {
+  background-color: rgba(44, 97, 102, 0.8);
+  color: #0a0a0a;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 3px solid rgba(11, 90, 97, 0.8);
+}

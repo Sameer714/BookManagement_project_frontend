@@ -1,0 +1,13 @@
+<div *ngIf="responseData" class="pr">
+    <div class="bg-img">
+        <h1 class = "heading"><b><i><u>Book Details</u></i></b></h1>
+
+    <ul class = "dy">
+      <li><strong>Title:</strong> {{ responseData.bookName }}</li>
+      <li><strong>Author:</strong> {{ responseData.authorName }}</li>
+      <li><strong>Launched on Date:</strong> {{ this.launchDate }}</li>
+      <li><strong>Overview:</strong> {{ responseData.aboutBook }}</li>
+    </ul>
+  </div>
+ 
+  

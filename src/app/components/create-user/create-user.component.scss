@@ -1,0 +1,138 @@
+.bg-img {
+    background-image: url("https://images.unsplash.com/photo-1681730602649-081a3096c3e0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    width: 229px;
+    height: 350px;
+    max-width: 800px;
+    padding: 23px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 36px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 90%;
+
+}
+
+.abk {
+    position: relative;
+    margin-bottom: 25px;
+    color: #3e6ab9;
+    padding: 19px 0 5px 0;
+}
+
+.abk label {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 15px;
+    color: #6057dd;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.abk input {
+    border: 0;
+    border-bottom: 1px solid #555;
+    background: transparent;
+    width: 100%;
+    padding: 8px 0 5px 0;
+    font-size: 16px;
+    color: #000000;
+}
+
+.bttn {
+    display: flex;
+    justify-content: center;
+}
+
+
+.invalid-credentials {
+    color: red;
+    margin-top: -4px;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(36, 122, 129, 0.8);
+    color: white;
+    padding: 10px;
+    margin: -8px;
+    border: inset;
+    cursor: pointer;
+    width: 56%;
+    border-radius: 36px;
+    transition-duration: 0.4s;
+    border: groove;
+    transition: background-color 0.3s; 
+}
+
+    .button:hover,
+  .button:focus {
+    background-color: rgba(11, 90, 97, 1); 
+  }
+  
+
+
+
+
+.cred {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #3e6ab9;
+    padding-left: 17px;
+}
+
+.signup {
+    display: flex;
+    justify-content: end;
+
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+    color: #3e6ab9;
+    padding: 19px 0 5px 0;
+}
+
+.input-container label {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 15px;
+    color: #6057dd;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.input-container input {
+    border: 0;
+    border-bottom: 1px solid #555;
+    background: transparent;
+    width: 100%;
+    padding: 8px 0 5px 0;
+    font-size: 16px;
+    color: #000000;
+}
+
+.input-container input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #e74c3c;
+    color: #0c0c0c;
+}

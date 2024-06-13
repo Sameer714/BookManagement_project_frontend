@@ -1,0 +1,29 @@
+<div>
+	<div class="bg-img"> 
+        <form [formGroup]="updateForm" class="container">
+            <div class="input-container">
+              <label>Book Name:</label>
+              <input type="text" formControlName="bookName" />
+            </div>
+            <div class="input-container">
+              <label>Author Name :</label>
+              <input type="text" formControlName="authorName" />
+            </div>
+            <div class="input-container">
+                <label>Launch Date</label>
+                <input *ngIf="editDate" type="date" formControlName="launchDate" />
+                <div style="display: flex;" *ngIf="!editDate">
+                <input type="text" formControlName="launchDate" />
+                <span (click)="editdate()">Edit</span>
+                </div>
+              </div>
+
+              <div class="abk">
+                <label>About Book</label>
+                <input type="text" formControlName="aboutBook" placeholder="Under 220 characters!"/>
+              </div>
+            <div class = "bttn"><button type="submit" class = "button" [disabled]= "updateForm.invalid" (click)="update()">Update Book!</button>
+            </div>
+          </form>				  
+	</div>
+</div>

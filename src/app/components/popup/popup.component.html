@@ -1,0 +1,14 @@
+<div>
+  <div class="bttn">
+    <button type="button" class="btn-close" (click)="close()">x</button>
+    </div>
+  <div class="popup">
+    <div class="congrats" *ngIf="status === 'done'">Sad :(</div>
+    <!-- <div class="congrats" *ngIf="status === 'updated'">Congratulations!</div> -->
+
+    <h2>{{ message }}</h2>
+  </div>
+  <div class="bttn2">
+    <button type="button" class="btn-ok" (click)="ok()">OK</button>
+  </div>
+</div>

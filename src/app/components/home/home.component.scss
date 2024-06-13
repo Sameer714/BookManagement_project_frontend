@@ -1,0 +1,231 @@
+.styled-table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 25px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    border-radius: 0px 10px 0 0;
+    overflow: hidden;
+  }
+  .heading{
+    text-align: center;
+    font-size: 90px;
+    color: rgba(255, 255, 255, 0.8);;
+
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .header {
+    background-color: rgba(8, 46, 49, 0.8);
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 33px;
+  }
+  
+  .header .heading {
+    font-size: 35px;
+    margin-bottom: -41px;
+    margin-top: 15px;
+  }
+  
+  .header .lg {
+    margin-top: 5px;
+  }
+  
+  .dropdown-content a,
+  .dropdown-content span {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover,
+  .dropdown-content span:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown-option {
+    cursor: pointer;
+    padding: 8px 16px;
+    margin: 0;
+    color: rgba(158, 166, 167, 0.8);
+    background-color:rgba(30, 63, 66, 0.8) ;
+  }
+  
+  .dropdown-option:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .df{
+    display: flex;
+    justify-content: start;
+    padding-right: 35px;
+  }
+  .user {
+    color: #dddddd;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+  }
+  .header {
+    background-color: rgba(8, 46, 49, 0.8);; 
+    padding: 30px; 
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px; 
+  }
+  .header .heading {
+    font-size: 35px;
+    margin-bottom: -41px;
+    margin-top: 15px;
+  }
+
+  .header .lg {
+    margin-top: 5px;
+  }
+  
+  
+  .bttun {
+    background-color: rgba(240, 244, 245, 0.8);
+    color: rgb(10, 10, 10);
+    padding: 10px 20px;
+    border: groove;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .bttun:hover {
+    background-color: #2d4f5c;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(31, 121, 129); 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a,
+  .dropdown-content span {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover,
+  .dropdown-content span:hover {
+    background-color: rgb(49, 138, 146); 
+  }
+  
+  .dropdown-option {
+    cursor: pointer;
+    padding: 8px 16px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(11, 90, 97, 1); 
+  }
+  
+  .dropdown-option:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .delete-action {
+    cursor: pointer;
+  }
+
+  .user {
+    color: #dddddd;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+
+  }
+
+  .dif{
+    display: flex;
+    justify-content: end;
+    padding-right: 35px;
+  }
+  
+  .bttun{
+    background-color: rgba(11,90,97,0.8);;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 11px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 45px;
+    transition-duration: 0.2s;
+    border: groove;
+  }
+  .bttn {
+    background-color: rgba(36, 122, 129, 0.8);
+      color: black;
+      padding: 10px 20px;
+      text-align: center;
+      display: inline-block;
+      font-size: 11px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 45px;
+      transition-duration: 0.4s;
+      border: groove;
+      transition: background-color 0.3s; 
+    }
+    .bttn:hover,
+  .bttn:focus {
+    background-color: rgba(11, 90, 97, 1); 
+  }
+  
+  
+  .styled-table thead tr {
+    background-color: rgba(11,90,97,0.8);
+    color: #0a0a0a;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+  }
+  
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    
+  }
+  .lg{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 35px;
+  }
+  
+  .styled-table tbody tr:last-of-type {
+    border-bottom: 3px solid rgba(11,90,97,0.8);;
+  }

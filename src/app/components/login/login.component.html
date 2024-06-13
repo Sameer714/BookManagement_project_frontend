@@ -1,0 +1,30 @@
+<div>
+  <div class="bg-img">
+    <form [formGroup]="loginForm" class="container">
+      <div class="input-container">
+        <label>Email:</label>
+        <input type="email" formControlName="gmail" />
+        <mat-error
+          *ngIf="loginForm.controls['gmail'].invalid && !loginForm.controls['gmail'].hasError('required')">Invalid
+          Gmail</mat-error>
+      </div>
+      <div class="input-container">
+        <label>Password:</label>
+        <input type="password" formControlName="passw" />
+        <mat-error
+          *ngIf="loginForm.controls['gmail'].invalid && !loginForm.controls['passw'].hasError('required')">Password
+          Required</mat-error>
+      </div>
+      <div class="signup"><a routerLink="/signup">Sign up ! </a>
+        <a routerLink="">Forgot Password? </a>
+      </div>
+      <div class="bttn">
+        <button class="button" type="submit" [disabled]="loginForm.invalid" (click)="login()">Login</button>
+
+      </div>
+      <div *ngIf="invalidCredentials" class="invalid-credentials">
+        Invalid username or password!
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+.popup {
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  .congrats{
+    font-size:large;
+  }
+}
+
+.popup h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.bttn {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+  background-color: lightpink;
+}
+
+.bttn .btn-close {
+  background-color: #ff6666; 
+  color: white;
+  border: none;
+  border-radius: 11px;
+  margin: 4px;
+  display: flex;
+  justify-content: center;
+  padding: 5px 10px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease; 
+}
+
+.bttn .btn-close:hover {
+  background-color: #ff4d4d;
+}
+
+.bttn2 {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.bttn2 .btn-ok {
+  background-color: #66ccff; 
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px; 
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.bttn2 .btn-ok:hover {
+  background-color: #4db8ff; /* Change color on hover */
+}
