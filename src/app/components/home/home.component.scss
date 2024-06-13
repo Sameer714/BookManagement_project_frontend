@@ -159,7 +159,7 @@
     color: #dddddd;
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
+    margin-right: 35px;
     cursor: pointer;
     margin-top: 5px;
 
@@ -202,6 +202,21 @@
   .bttn:focus {
     background-color: rgba(11, 90, 97, 1); 
   }
+
+  .dropbtn {
+    background-color: rgba(36, 122, 129, 0.8);
+    color: white;
+    border-radius: 15px;
+    padding: 8px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+  }
+  .dropbtn:hover,
+.dropbtn:focus {
+  background-color: rgba(11, 90, 97, 1); 
+}
   
   
   .styled-table thead tr {

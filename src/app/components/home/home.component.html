@@ -40,9 +40,9 @@
         <td>{{ book.bookName }}</td>
         <td>{{ book.authorName }}</td>
         <td>{{ this.launchDate[i] }}</td>
-        <td><a [routerLink]="['/data', book.id]">Open</a></td>
-        <td *ngIf="role == 'ROLE_ADMIN'"><a [routerLink]="['/update', book.id]">Edit</a></td>
-        <td *ngIf="role == 'ROLE_ADMIN'"><span (click)="delete(book.id)" style="cursor: pointer;">Delete</span></td>
+        <td><button class="dropbtn" [routerLink]="['/data', book.id]">Open</button></td>
+        <td *ngIf="role == 'ROLE_ADMIN'"><button class="dropbtn" [routerLink]="['/update', book.id]">Edit</button></td>
+        <td *ngIf="role == 'ROLE_ADMIN'"><button class="dropbtn" (click)="delete(book.id)" style="cursor: pointer;">Delete</button></td>
       </tr>
     </tbody>
   </table>

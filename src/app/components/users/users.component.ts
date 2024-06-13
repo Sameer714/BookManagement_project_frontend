@@ -10,6 +10,7 @@ import { PopupComponent } from '../popup/popup.component';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
+
   responseData1: string = ''; 
   responseData: any[] = [];
   role: any;
@@ -78,6 +79,10 @@ export class UsersComponent implements OnInit {
     localStorage.clear();
     this.router.navigateByUrl('login');
   }
+
+  books() {
+    this.router.navigateByUrl('/home')
+    }
 
   delete(id: any) {
     console.log('id', id);

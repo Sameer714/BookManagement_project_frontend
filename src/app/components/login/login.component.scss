@@ -49,6 +49,10 @@
     width: 93%;
     border-radius: 36px;
 }
+.button:hover,
+.button:focus {
+  background-color: rgba(11, 90, 97, 1); 
+}
 
 .cred {
     display: flex;

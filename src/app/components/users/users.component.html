@@ -12,6 +12,10 @@
   </div>
 </div>
 
+<div class="df">
+  <button class="bttn" type="submit" (click)="books()" *ngIf="role == 'ROLE_ADMIN'"><b>Book List</b></button>
+</div>
+
 <div class="dif">
   <button class="bttn" type="submit" (click)="create()" *ngIf="role == 'ROLE_ADMIN'"><b>Add New User!</b></button>
 </div>
