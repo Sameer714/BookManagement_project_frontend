@@ -19,6 +19,8 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
 import { DelUserComponent } from './components/del-user/del-user.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ChangePassComponent } from './components/change-pass/change-pass.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { ChangePassComponent } from './components/change-pass/change-pass.compon
     ReactiveFormsModule,
     HttpClientModule,
     MatDialogModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
