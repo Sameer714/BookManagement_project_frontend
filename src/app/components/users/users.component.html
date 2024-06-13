@@ -46,7 +46,7 @@
         <td> 
           <button class="dropbtn" *ngIf="user.status === 'INACTIVE' && user.id != this.id" (click)="changestatus(user.id)">Activate</button>
           <button class="dropbtn" *ngIf="user.status === 'ACTIVE' && user.id != this.id" (click)="changestatus(user.id)">Inactivate</button>
-          <button class="dropbtn" *ngIf="user.id == this.id">Self User</button>
+          <button class="dropbtn" *ngIf="user.id == this.id" matTooltip="User cannot change self status!">Self</button>
         </td>
 
         <td>
