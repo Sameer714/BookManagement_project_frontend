@@ -18,7 +18,7 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { DelUserComponent } from './components/del-user/del-user.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ChangePassComponent } from './components/change-pass/forgot-pass.component';
+import { ChangePassComponent } from './components/change-pass/change-pass.component';
 
 @NgModule({
   declarations: [
