@@ -32,9 +32,23 @@ export class SignupComponent implements OnInit {
       this.http.post<any>('http://localhost:9091/v1/api/createuser', this.signupForm.value)
         .subscribe(response => {
           console.log('Response from server:', response);
-          const popup = this.dialog.open(PopupComponent, {
-            data: { message: response.message }
-          });
+          if(response.Success === "true"){
+            const popup = this.dialog.open(PopupComponent, {
+              data: {
+                message: response.message,
+                status: 'welcome'
+              }
+            });
+          }
+          else if (response.Success === "false"){
+            const popup = this.dialog.open(PopupComponent, {
+              data: {
+                message: response.message,
+                status: 'sed'
+              }
+            });
+          }
+
           if (response.Success === "true") {
             this.router.navigate(['/login']);
           } else {

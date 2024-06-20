@@ -58,7 +58,7 @@ export class ForgotPassComponent implements OnInit {
             const popup = this.dialog.open(PopupComponent, {
               data: {
                 message: response.message,
-                status: 'otpdone'
+                status: 'otpnotdone'
               }
             });
             this.isEmailVerified = false;
@@ -106,7 +106,7 @@ export class ForgotPassComponent implements OnInit {
             const popup = this.dialog.open(PopupComponent, {
               data: {
                 message: response.message,
-                status: 'otpandpassdone'
+                status: 'otpandpassnotdone'
               }
             });
             this.forgotPassForm.controls['otp'].reset();

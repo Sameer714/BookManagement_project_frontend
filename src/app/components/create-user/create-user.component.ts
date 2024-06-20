@@ -30,14 +30,30 @@ signup() {
       .subscribe(response => {
         console.log('Response from server:', response);
         response : 'text';
-        const popup = this.dialog.open(PopupComponent, {
-          data: { message: response.message }
-        });
-          if(response.Success == true){
-            this.router.navigateByUrl('/users');
-          } else{
-            this.router.navigateByUrl('/users');
-          }
+        if(response.Success === "true"){
+          const popup = this.dialog.open(PopupComponent, {
+              data: {
+                message: response.message,
+                status: 'welcome'
+              }
+          });
+          this.router.navigateByUrl('/users');
+
+        }
+
+        if(response.Success === "false"){
+          const popup = this.dialog.open(PopupComponent, {
+              data: {
+                message: response.message,
+                status: 'sed'
+              }
+          });
+          this.router.navigateByUrl('/create-user');
+
+        }
+
+     
+          
       }, error => {
         console.error('Error:', error);
       });  

@@ -1,13 +1,26 @@
-<div>
+<div class = "wholepopup">
   <div class="bttn">
     <button type="button" class="btn-close" (click)="close()">x</button>
     </div>
   <div class="popup">
-    <div class="congrats" *ngIf="status === 'done'">Sad :(</div>
-    <!-- <div class="congrats" *ngIf="status === 'updated'">Congratulations!</div> -->
+    <div class="congrats" *ngIf="status === 'done'"><i>Sad :(</i></div>
 
-    <h2>{{ message }}</h2>
+    <div class="congrats" *ngIf="status === 'happy'"><i>Yayy!</i></div>
+    <div class="congrats" *ngIf="status === 'otpnotdone'"><i>Oh no:((</i></div>
+
+    <div class="congrats" *ngIf="status === 'otpandpassdone'"><i>Try not to forget your Password again ;)</i></div>
+    <div class="congrats" *ngIf="status === 'otpandpassnotdone'"><i>Oh no :((</i></div>
+
+    <div class="congrats" *ngIf="status === 'welcome'"><i>Welcome!!</i></div>
+
+    <div class="congrats" *ngIf="status === 'sed'"><i>Oh no :((</i></div>
+
+    <div class="congrats" *ngIf="status === 'passupdated'"><i>Done!</i></div>
+    <div class="congrats" *ngIf="status === 'passnotupdated'"><i>Oh no :((</i></div>
+
+    <h3 class="maintxt">{{ message }}</h3>
   </div>
+  
   <div class="bttn2">
     <button type="button" class="btn-ok" (click)="ok()">OK</button>
   </div>
