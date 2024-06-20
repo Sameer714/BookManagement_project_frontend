@@ -1,0 +1,135 @@
+.bg-img {
+    background-image: url("https://img.freepik.com/free-photo/autumn-leaves-composition_23-2151554949.jpg?t=st=1718796975~exp=1718800575~hmac=6150f81cf1d4d9a7b6e60e763012c7c5ceb0a237788405b9acfb961180d2f74c&w=826");
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 254px; 
+    max-width: 400px; 
+    height:max-content;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 9px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 88%;
+    border-radius: 50px;
+    margin-top: 50px; 
+  }
+  
+  .bttn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; }
+
+  
+  .invalid-credentials {
+    color: red;
+    margin-top: 10px; 
+    font-size: small;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(138, 41, 41, 0.8);
+    color: white;
+    padding: 14px;
+    margin: -48px;
+    border: groove;
+    cursor: pointer;
+    width: 489%;
+    margin-top: 25px;
+    border-radius: 55px;
+}
+  
+  .button:hover,
+  .button:focus {
+    background-color: rgba(161, 22, 34, 0.8);
+  }
+
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; 
+  }
+  
+  .loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3); 
+    border-top: 4px solid #a13737; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 0.5s linear infinite; 
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  .signup {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 2px;
+    font-size: small;
+    margin: -3px 0; 
+    margin-bottom: -25px;
+  }
+  
+  .input-container {
+    position: relative;
+    margin-bottom: 25px;
+    color: #c03249;
+    padding: -2px 0 5px 0;
+    width: 100%; 
+  }
+  
+  .input-container label {
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    font-size: 14px;
+    color: #6057dd;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 39px;
+  }
+  
+  .input-container input {
+    border: 0;
+    border-bottom: 1px solid #555;
+    background: rgba(255, 255, 255, -0.2) !important;
+    width: 100%;
+    padding: 37px 0 5px 0;
+    font-size: 16px;
+    color: #000000;
+  }
+  
+  .input-container input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #e74c3c;
+    background: rgba(255, 255, 255, -0.2) !important;
+  }
+  

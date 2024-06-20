@@ -1,0 +1,42 @@
+<div class="loading-overlay" *ngIf="loading">
+  <div class="loading-spinner"></div>
+</div>
+
+<div class="bg-img">
+  <form [formGroup]="forgotPassForm" class="container">
+
+    <div class="input-container">
+      <label>Email:</label>
+      <input type="email" formControlName="email" />
+      <mat-error *ngIf="forgotPassForm.controls['email'].invalid && forgotPassForm.controls['email'].touched">
+        Invalid Email
+      </mat-error>
+    </div>
+
+    <div class="input-container" *ngIf="isEmailVerified">
+      <label>Enter OTP</label>
+      <input type="text" formControlName="otp" />
+    </div>
+
+    <div class="input-container" *ngIf="isEmailVerified">
+      <label>Enter Password</label>
+      <input type="password" formControlName="newPass" />
+    </div>
+
+    <div class="bttn" *ngIf="!isEmailVerified">
+      <button class="button" type="button" (click)="generateOTP()" [disabled]="forgotPassForm.controls['email'].invalid">Generate OTP</button>
+    </div>
+
+   
+    <div class="bttn" *ngIf="isEmailVerified">
+      <button class="button" type="button" (click)="verifyOTP()" [disabled]="forgotPassForm.controls['otp'].invalid">Change Password</button>
+    </div>
+
+  
+    <div *ngIf="invalidCredentials" class="invalid-credentials">
+      Invalid email or OTP!
+    </div>
+
+  </form>
+  
+</div>

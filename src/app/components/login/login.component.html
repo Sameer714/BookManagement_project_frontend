@@ -4,23 +4,23 @@
       <div class="input-container">
         <label>Email:</label>
         <input type="email" formControlName="gmail" />
-        <mat-error
-          *ngIf="loginForm.controls['gmail'].invalid && !loginForm.controls['gmail'].hasError('required')">Invalid
-          Gmail</mat-error>
+        <mat-error *ngIf="loginForm.controls['gmail'].invalid && !loginForm.controls['gmail'].hasError('required')">
+          Invalid Email
+        </mat-error>
       </div>
       <div class="input-container">
         <label>Password:</label>
         <input type="password" formControlName="passw" />
-        <mat-error
-          *ngIf="loginForm.controls['gmail'].invalid && !loginForm.controls['passw'].hasError('required')">Password
-          Required</mat-error>
+        <mat-error *ngIf="loginForm.controls['passw'].invalid && !loginForm.controls['passw'].hasError('required')">
+          Password is short!
+        </mat-error>
       </div>
-      <div class="signup"><a routerLink="/signup">Sign up ! </a>
-        <a routerLink="">Forgot Password? </a>
+      <div class="signup">
+        <a routerLink="/signup">Sign up !</a>
+        <a routerLink="/forgot-pass">Forgot Password?</a>
       </div>
       <div class="bttn">
         <button class="button" type="submit" [disabled]="loginForm.invalid" (click)="login()">Login</button>
-
       </div>
       <div *ngIf="invalidCredentials" class="invalid-credentials">
         Invalid username or password!

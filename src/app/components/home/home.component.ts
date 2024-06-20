@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   role: any;
   token: any;
   loggedinUser :any;
+  loading: boolean = false;
   
   constructor(private http: HttpClient, private router: Router, private dialog : MatDialog) {
     this.minDate = new Date();
@@ -33,6 +34,8 @@ export class HomeComponent implements OnInit {
   }
 
   getAllData(token: string) {
+    this.loading = true;
+
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
@@ -49,8 +52,11 @@ export class HomeComponent implements OnInit {
           const formattedDate = launch.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
           this.launchDate.push(formattedDate);
         });
+        this.loading = false;
+
       }, error => {
         console.error('Error:', error);
+        this.loading = false;
       });
   }
 
