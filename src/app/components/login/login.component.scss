@@ -30,6 +30,7 @@
     justify-content: center;
 }
 
+
 .invalid-credentials {
     color: red;
     margin-top: 5px;
@@ -90,6 +91,7 @@
 
 .input-container input {
     border: 0;
+    cursor:text;
     border-bottom: 1px solid #555;
     background: transparent;
     width: 100%;

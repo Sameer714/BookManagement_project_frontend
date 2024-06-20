@@ -3,58 +3,71 @@
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  .congrats{
-    font-size:large;
-  }
+  background-color: #ffffff;
+  max-width: 400px; /* Adjust the max-width as per your design */
+  margin: auto;
 }
 
-.popup h2 {
+.wholepopup {
+  border: solid;
+}
+.h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
+  color: #333333;
 }
 
-.bttn {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 8px;
-  background-color: lightpink;
+.congrats {
+  font-size: small;
+  color: #333333;
+  margin: -15px;
+}
+.maintxt{
+  margin-bottom: -4px;
 }
 
 .bttn .btn-close {
-  background-color: #ff6666; 
+  background-color: #d52525;
   color: white;
   border: none;
   border-radius: 11px;
-  margin: 4px;
-  display: flex;
-  justify-content: center;
-  padding: 5px 10px; 
+  padding: 8px 20px;
   cursor: pointer;
-  transition: background-color 0.5s ease; 
+  transition: background-color 0.3s ease;
+  font-size: 14px;
 }
 
 .bttn .btn-close:hover {
-  background-color: #ff4d4d;
+  background-color: #911111;
 }
-
-.bttn2 {
+.bttn2{
   display: flex;
   justify-content: center;
-  margin: 10px 0;
+  margin-top: 5px;
+  margin-bottom: 6px;
+}
+.bttn{
+  display: flex;
+  justify-content: end;
+  margin-top: 7px;
+  margin-right: 8px;
 }
 
-.bttn2 .btn-ok {
-  background-color: #66ccff; 
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px; 
+.btn-ok {
+  background-color: #dd6464;
+  color: white;
+  border: inset;
+  border-radius: 21px;
+  padding: 8px 20px;
   cursor: pointer;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease;
+  font-size: 13px;
+  width: 104px;
 }
 
-.bttn2 .btn-ok:hover {
-  background-color: #4db8ff; /* Change color on hover */
+.btn-ok:hover {
+  background-color: #8f2323;
 }

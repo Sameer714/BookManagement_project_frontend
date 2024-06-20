@@ -29,7 +29,9 @@
   .bttn {
     display: flex;
     justify-content: center;
-    margin-top: 10px; }
+    margin-top: 10px; 
+
+  }
 
   
   .invalid-credentials {
@@ -43,7 +45,7 @@
   .button {
     display: flex;
     justify-content: center;
-    background-color: rgba(138, 41, 41, 0.8);
+    background-color: rgba(145, 36, 36, 0.8);
     color: white;
     padding: 14px;
     margin: -48px;
@@ -56,7 +58,8 @@
   
   .button:hover,
   .button:focus {
-    background-color: rgba(161, 22, 34, 0.8);
+    background-color: rgba(224, 22, 39, 0.8);
+    
   }
 
   .loading-overlay {

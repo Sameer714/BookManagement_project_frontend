@@ -13,7 +13,6 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { ChangePassComponent } from './components/change-pass/change-pass.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
-import { ConfirmpassComponent } from './confirmpass/confirmpass.component';
 
 const routes: Routes = [
   {
@@ -55,10 +54,6 @@ const routes: Routes = [
 {
   path : 'forgot-pass' , component:ForgotPassComponent
 },
-{
-  path: 'confirmpass' , component:ConfirmpassComponent
-},
-
 {
   path:"", redirectTo:"login", pathMatch:"full",
 }

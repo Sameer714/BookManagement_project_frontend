@@ -47,12 +47,24 @@ export class ChangePassComponent {
           }
 
           console.log('Response from Update:', response);
-          const popup = this.dialog.open(PopupComponent, {
-            data: {
-              message: response.message,
-              status: 'updated'
-            }
-          });
+          if(response.Success==="true"){
+            const popup = this.dialog.open(PopupComponent, {
+              data: {
+                message: response.message,
+                status: 'passupdated'
+              }
+            });
+          }
+
+         else if(response.Success==="false"){
+            const popup = this.dialog.open(PopupComponent, {
+              data: {
+                message: response.message,
+                status: 'passnotupdated'
+              }
+            });
+          }
+
 
         }, error => {
           console.error('Error:', error);
