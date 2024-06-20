@@ -21,7 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ChangePassComponent } from './components/change-pass/change-pass.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
-
+import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +38,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     UserInfoComponent,
     DelUserComponent,
     ChangePassComponent,
+    ForgotPassComponent,
   ],
   imports: [
     BrowserModule,

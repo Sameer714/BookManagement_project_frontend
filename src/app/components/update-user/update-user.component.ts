@@ -62,6 +62,11 @@ export class UpdateUserComponent implements OnInit {
     }
   }
 
+  logout() {
+    localStorage.clear();
+    this.router.navigateByUrl('login');
+  }
+
   update() {
     if (this.updateUserForm.valid) {
       const headers = new HttpHeaders({
@@ -74,15 +79,27 @@ export class UpdateUserComponent implements OnInit {
         .subscribe(response => {
           this.responseData = response;
           console.log('Response from Update:', response);
-          const popup = this.dialog.open(PopupComponent, {
-            data: { 
-              message: 'User Updated Successfully',
-              from: 'Update',
-              id: this.userId
-            }
-          });
-          // Reset form after successful update
-          this.updateUserForm.reset();
+          
+          if(this.responseData.Success === "true"){
+            const popup = this.dialog.open(PopupComponent, {
+              data: { 
+                message: 'User Updated Successfully',
+                from: 'Update',
+                id: this.userId
+              }
+            });
+            this.logout();
+
+          }
+          else if(this.responseData.Success === "false"){
+            const popup = this.dialog.open(PopupComponent, {
+              data: { 
+                message: this.responseData.message,
+                from: 'Update',
+                id: this.userId
+              }
+            });
+          }
         }, error => {
           console.error('Error:', error);
         });

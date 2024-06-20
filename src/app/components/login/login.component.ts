@@ -14,12 +14,12 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   invalidCredentials = false;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router , private dialog : MatDialog) {}
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router, private dialog: MatDialog) {}
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      gmail: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
-      passw: ['', [Validators.required, Validators.minLength(6)]]
+      gmail: ['', [Validators.required, Validators.email]],
+      passw: ['', [Validators.required, Validators.minLength(5)]]
     });
   }
 
@@ -29,17 +29,17 @@ export class LoginComponent implements OnInit {
       this.http.post<any>('http://localhost:9091/auth/login', this.loginForm.value)
         .subscribe(response => {
           console.log('Response from server:', response);
-  
+
           if (response.jwtoken) {
             localStorage.setItem('jwtoken', response.jwtoken);
             localStorage.setItem('Role', response.role);
             localStorage.setItem('usernm', response.usernm);
-            localStorage.setItem('id',response.id);
+            localStorage.setItem('id', response.id);
 
             this.router.navigateByUrl('/home');
           } else if (response.usernm === "USER INACTIVE!") {
             const popup = this.dialog.open(PopupComponent, {
-              data: { message: "The Account is inactive!"}
+              data: { message: "The Account is inactive!" }
             });
             this.router.navigateByUrl('/login');
           } else {
@@ -51,5 +51,4 @@ export class LoginComponent implements OnInit {
         });
     }
   }
-  
 }

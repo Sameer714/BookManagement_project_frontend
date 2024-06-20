@@ -132,7 +132,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgb(31, 121, 129); 
+  background-color: rgb(199 228 231); 
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -148,19 +148,21 @@
 
 .dropdown-content a:hover,
 .dropdown-content span:hover {
-  background-color: rgb(49, 138, 146); 
+  background-color: rgb(128, 173, 177); 
 }
 
 .dropdown-option {
   cursor: pointer;
   padding: 8px 16px;
   margin: 0;
-  color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(11, 90, 97, 1); 
+  color: rgba(8, 8, 8, 0.8);
+  background-color: rgb(174, 209, 212);
+ 
 }
 
 .dropdown-option:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgb(128, 173, 177); 
+
 }
 .usernm{
   cursor: pointer;

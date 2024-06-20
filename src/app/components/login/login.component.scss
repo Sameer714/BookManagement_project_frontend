@@ -1,5 +1,6 @@
 .bg-img {
-    background-image: url("https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-image: url("https://img.freepik.com/free-photo/autumn-leaves-composition_23-2151554949.jpg?t=st=1718796975~exp=1718800575~hmac=6150f81cf1d4d9a7b6e60e763012c7c5ceb0a237788405b9acfb961180d2f74c&w=826");
+
     min-height: 100vh;
     background-size: cover;
     display: flex;
@@ -14,7 +15,7 @@
     justify-content: end;
     position: relative;
     width: 242px;
-    height: 280px;
+    height: 275px;
     max-width: 800px;
     padding: 16px;
     background: rgba(255, 255, 255, 0.8);
@@ -31,7 +32,7 @@
 
 .invalid-credentials {
     color: red;
-    margin-top: -4px;
+    margin-top: 5px;
     font-size: small;
     display: flex;
     justify-content: center;
@@ -40,18 +41,19 @@
 .button {
     display: flex;
     justify-content: center;
-    background-color: rgba(11, 90, 97, 0.8);
+    background-color: rgba(158, 6, 6, 0.8);
     color: white;
     padding: 12px;
     margin: 10px;
     border: groove;
     cursor: pointer;
-    width: 93%;
+    width: 65%;
     border-radius: 36px;
+    margin-bottom: -2px;
 }
 .button:hover,
 .button:focus {
-  background-color: rgba(11, 90, 97, 1); 
+  background-color: rgb(158, 27, 27); 
 }
 
 .cred {

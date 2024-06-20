@@ -1,30 +1,33 @@
 .bg-img {
-    background-image: url("https://images.pexels.com/photos/268261/pexels-photo-268261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");		
+    background-image: url("https://img.freepik.com/free-photo/autumn-leaves-composition_23-2151554880.jpg?t=st=1718797571~exp=1718801171~hmac=54a8035e8fdc87db94764581a1910b54015d27fdccc6300579a5b92aa6bb1982&w=826");		
+
     min-height: 100vh;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
 }
 
 .container {
-display: flex;
-flex-direction: column;
-justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     position: relative;
-width: 269px;
-height :453px;
+    width: 242px;
+    height: 390px;
     max-width: 800px;
-    padding: 23px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.8);
-    border-radius: 36px;
+    border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-opacity:90%;		
+    opacity: 90%;		
 
 }
 .signin{
     display: flex;
     justify-content:center;
+    margin-bottom: -12px;
 }
 .bttn{
 display: flex;
@@ -38,22 +41,26 @@ justify-content:center;
     justify-content:center ;
   }
 .button {
-display:flex ;
-justify-content:center;
-    background-color: rgba(11,90,97,0.8);
+    display: flex;
+    justify-content: center;
+    background-color: rgba(158, 6, 6, 0.8);
     color: white;
     padding: 10px;
-margin: 16px;
+    margin: -5px;
     border: inset;
     cursor: pointer;
-    width: 56%;
+    width: 62%;
 border-radius: 36px;
 }		
+.button:hover,
+.button:focus {
+  background-color: rgb(158, 27, 27); 
+}
 .cred{
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-color : #3e6ab9;
+color: #6057dd;
 padding-left: 17px;
 }
 
@@ -65,8 +72,8 @@ justify-content:end;
 
 .input-container{
 position:relative;
-margin-bottom:25px;
-color: #3e6ab9;
+margin-bottom: -3px;
+color: #6057dd;
 padding: 19px 0 5px 0;
 }
 
@@ -75,7 +82,7 @@ position:absolute;
 top:0px;
 left:0px;
 font-size:15px;
-color: #6057dd;	
+color: #6057dd;
 pointer-events:none;
 transition: all 0.5s ease-in-out;
 }

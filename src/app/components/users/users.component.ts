@@ -11,23 +11,24 @@ import { PopupComponent } from '../popup/popup.component';
 })
 export class UsersComponent implements OnInit {
 
-  responseData1: string = ''; 
+  responseData1: string = '';
   responseData: any[] = [];
   role: any;
   token: any;
   userId: any;
   id: any;
   loggedinUser: any;
+  loading: boolean = false;
 
-  constructor(private http: HttpClient, private router: Router , private dialog : MatDialog) { }
+  constructor(private http: HttpClient, private router: Router, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.token = localStorage.getItem('jwtoken');
     this.role = localStorage.getItem('Role');
     this.loggedinUser = localStorage.getItem('usernm')
     this.id = localStorage.getItem('id');
-    console.log('user id',this.id);
-    
+    console.log('user id', this.id);
+
     if (this.token) {
       this.getAllData(this.token);
     } else {
@@ -35,6 +36,8 @@ export class UsersComponent implements OnInit {
   }
 
   getAllData(token: string) {
+    this.loading = true;
+
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
@@ -43,9 +46,15 @@ export class UsersComponent implements OnInit {
       .subscribe(response => {
         this.responseData = response;
         console.log('Response from getAllUsers:', response);
-      })
-  }
+        this.loading = false;
 
+      },
+
+        error => {
+          console.error('Error:', error);
+          this.loading = false;
+        });
+  }
 
   create() {
     this.router.navigateByUrl('/create-user');
@@ -55,23 +64,24 @@ export class UsersComponent implements OnInit {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
     });
-  
+
     this.http.put<string>(`http://localhost:9091/v1/api/updateStatus/${userId}`, null, { headers })
       .subscribe(
         (response: string) => {
           this.responseData1 = response;
           console.log('Response from change status:', response);
           this.getAllData(this.token)
-        }, 
+
+        },
         (error) => {
           console.error('Error:', error);
         }
       );
   }
-  
+
   logout() {
     const popup = this.dialog.open(PopupComponent, {
-      data: { 
+      data: {
         message: "Logged Out Successfully!",
         status: 'done'
       }
@@ -82,7 +92,7 @@ export class UsersComponent implements OnInit {
 
   books() {
     this.router.navigateByUrl('/home')
-    }
+  }
 
   delete(id: any) {
     console.log('id', id);
