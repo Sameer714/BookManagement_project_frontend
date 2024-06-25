@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { PopupComponent } from '../components/popup/popup.component';
+import { PopupComponent } from '../popup/popup.component';
 
 @Component({
   selector: 'app-forgot-pass',

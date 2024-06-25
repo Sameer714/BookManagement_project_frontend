@@ -12,7 +12,7 @@ import { DelUserComponent } from './components/del-user/del-user.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
 import { ChangePassComponent } from './components/change-pass/change-pass.component';
-import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
+import { ForgotPassComponent } from './components/forgot-pass/forgot-pass.component';
 
 const routes: Routes = [
   {
